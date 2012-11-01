@@ -122,7 +122,8 @@ module OpenID
         end
 
         if @assoc
-          message.set_arg(OPENID_NS, 'assoc_handle', @assoc.handle)
+          # commenting this per GH issue #1 https://github.com/openid/ruby-openid/issues/1
+          #message.set_arg(OPENID_NS, 'assoc_handle', @assoc.handle)
           assoc_log_msg = "with assocication #{@assoc.handle}"
         else
           assoc_log_msg = 'using stateless mode.'
